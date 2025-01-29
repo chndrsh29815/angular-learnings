@@ -1,0 +1,2 @@
+1. first index.html file will be loaded which is root of all components. it will load main.ts file under the hood. when we inspect then we see main.js added in script tag.
+2. main.ts will load the appComponent class.
