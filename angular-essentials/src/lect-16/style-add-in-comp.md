@@ -11,3 +11,5 @@
 
 })
 ```
+
+2. command to generate component in angular cli ==> ng g c user
