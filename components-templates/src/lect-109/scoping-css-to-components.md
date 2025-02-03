@@ -1,0 +1,2 @@
+# style.css vs component specific css
+style.css file applicable for all components throughout the application but styles defined in components specific css files are only applicable to that component only which could be beneficial to avoid potential css class clashing.
