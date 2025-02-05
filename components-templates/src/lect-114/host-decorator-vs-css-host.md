@@ -29,3 +29,4 @@ two ways to solve above situation
 
 In above case earlier div element was there in markup to target .dashboard-item css property.
 we have removed that extra div and target the host element with host property.
+
