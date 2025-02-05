@@ -74,7 +74,10 @@ import { bootstrapApplication } from '@angular/platform-browser';
 // //lect-124
 // import {AppComponent} from './lect-124/app/app.component'
 
-//lect-125
-import {AppComponent} from './lect-125/app/app.component'
+// //lect-125
+// import {AppComponent} from './lect-125/app/app.component'
+
+//lect-126
+import {AppComponent} from './lect-126/app/app.component'
 
 bootstrapApplication(AppComponent).catch((err) => console.error(err));
