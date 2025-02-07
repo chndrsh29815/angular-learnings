@@ -1,6 +1,13 @@
 import { bootstrapApplication } from '@angular/platform-browser';
 
-import { AppComponent } from './app/app.component';
+import { provideHttpClient } from '@angular/common/http';
+
+//import { AppComponent } from './app/app.component';
+
+// lect-219
+import { AppComponent } from './lect-219/app/app.component';
 
 
-bootstrapApplication(AppComponent).catch((err) => console.error(err));
+bootstrapApplication(AppComponent, {
+  providers: [provideHttpClient()],
+}).catch((err) => console.error(err));
