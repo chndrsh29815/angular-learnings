@@ -7,8 +7,11 @@ import { provideHttpClient } from '@angular/common/http';
 // // lect-219
 // import { AppComponent } from './lect-219/app/app.component';
 
-// lect-220
-import { AppComponent } from './lect-220/app/app.component';
+// // lect-220
+// import { AppComponent } from './lect-220/app/app.component';
+
+// lect-222
+import { AppComponent } from './lect-222/app/app.component';
 
 bootstrapApplication(AppComponent, {
   providers: [provideHttpClient()],
