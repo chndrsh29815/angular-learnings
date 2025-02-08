@@ -1,6 +1,6 @@
-<app-places-container title="Your Favorite Places">
+<app-places-container title="Available Places">
   @if(isFecting() && !error()) {
-    <p class="fallback-text">Fetching Favourite places...</p>
+    <p class="fallback-text">Fetching places...</p>
   }
 
   @if(error()) {
@@ -8,8 +8,8 @@
   }
 
   @if (places()) {
-    <app-places [places]="places()!" />
-  } @else if (places().length === 0) {
+    <app-places [places]="places()!" (selectPlace)="onSelectPlaces($event)"/>
+  } @else if (places()?.length === 0) {
     <p class="fallback-text">Unfortunately, no places could be found.</p>
   }
 </app-places-container>
