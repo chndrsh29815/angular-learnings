@@ -1,6 +1,6 @@
 import { bootstrapApplication } from '@angular/platform-browser';
 
-import { HttpHandlerFn, HttpRequest, provideHttpClient, withInterceptors } from '@angular/common/http';
+import { HttpEventType, HttpHandlerFn, HttpRequest, provideHttpClient, withInterceptors } from '@angular/common/http';
 
 //import { AppComponent } from './app/app.component';
 
@@ -40,8 +40,12 @@ import { HttpHandlerFn, HttpRequest, provideHttpClient, withInterceptors } from 
 // // lect-233
 // import { AppComponent } from './lect-233/app/app.component';
 
-// lect-234
-import { AppComponent } from './lect-234/app/app.component';
+// // lect-234
+// import { AppComponent } from './lect-234/app/app.component';
+
+// lect-236
+import { AppComponent } from './lect-236/app/app.component';
+import { tap } from 'rxjs';
 
 
 bootstrapApplication(AppComponent, {
@@ -49,9 +53,16 @@ bootstrapApplication(AppComponent, {
 }).catch((err) => console.error(err));
 
 function loggingInterceptors(request: HttpRequest<unknown>, next: HttpHandlerFn) {
-  const req = request.clone({
-    headers: request.headers.set("X-testing", "Testing")
-  })
+  // const req = request.clone({
+  //   headers: request.headers.set("X-testing", "Testing")
+  // })
   console.log(request);
-  return next(req);
+  return next(request).pipe(tap({
+    next: event=> {
+      if(event.type === HttpEventType.Response) {
+        console.log(event.status);
+        console.log(event.body)
+      }
+    }
+  }));
 }
