@@ -4,5 +4,6 @@ import { bootstrapApplication } from '@angular/platform-browser';
 
 // lect-263
 import { AppComponent } from './lect-263/app/app.component';
+import { appConfigs } from './lect-264/app/app.config';
 
-bootstrapApplication(AppComponent).catch((err) => console.error(err));
+bootstrapApplication(AppComponent, appConfigs).catch((err) => console.error(err));
